@@ -176,6 +176,9 @@ impl IntoWorkflowCommand for LocalActivityOptions {
 /// Options for scheduling a child workflow
 #[derive(Default, Debug, Clone)]
 pub struct ChildWorkflowOptions {
+    /// Namespace of the child workflow.
+    /// Optional: the current workflow (parent)'s namespace will be used if this is not provided.
+    pub namespace: String,
     /// Workflow ID
     pub workflow_id: String,
     /// Type of workflow to schedule
@@ -199,6 +202,7 @@ impl IntoWorkflowCommand for ChildWorkflowOptions {
     fn into_command(self, seq: u32) -> StartChildWorkflowExecution {
         StartChildWorkflowExecution {
             seq,
+            namespace: self.namespace,
             workflow_id: self.workflow_id,
             workflow_type: self.workflow_type,
             task_queue: self.task_queue.unwrap_or_default(),
