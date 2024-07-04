@@ -48,6 +48,8 @@ extern crate tracing;
 mod activity_context;
 mod app_data;
 pub mod interceptors;
+pub mod prelude;
+pub mod workflow;
 mod workflow_context;
 mod workflow_future;
 
