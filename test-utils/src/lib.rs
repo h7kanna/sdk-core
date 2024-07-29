@@ -120,7 +120,7 @@ pub fn init_core_replay_stream<I>(test_name: &str, histories: I) -> Arc<dyn Core
 where
     I: Stream<Item = HistoryForReplay> + Send + 'static,
 {
-    init_integ_telem();
+    //init_integ_telem();
     let worker_cfg = integ_worker_config(test_name)
         .build()
         .expect("Configuration options construct properly");
