@@ -45,14 +45,14 @@ itertools = "0.14"
 lru = "0.13"
 mockall = "0.13"
 opentelemetry = { workspace = true, features = ["metrics"], optional = true }
-opentelemetry_sdk = { version = "0.30", features = ["rt-tokio", "metrics", "spec_unstable_metrics_views"], optional = true }
-opentelemetry-otlp = { version = "0.30", features = ["tokio", "metrics", "tls", "http-proto", "grpc-tonic"], optional = true }
+opentelemetry_sdk = { version = "0.31", features = ["rt-tokio", "metrics", "spec_unstable_metrics_views"], optional = true }
+opentelemetry-otlp = { version = "0.31", features = ["tokio", "metrics", "tls", "http-proto", "grpc-tonic"], optional = true }
 parking_lot = { version = "0.12", features = ["send_guard"] }
 pid = "4.0"
 pin-project = "1.0"
 prometheus = { version = "0.14", optional = true }
 prost = { workspace = true }
-prost-types = { version = "0.6", package = "prost-wkt-types" }
+prost-types = { version = "0.7", package = "prost-wkt-types" }
 rand = "0.9"
 reqwest = { version = "0.12", features = ["json", "stream", "rustls-tls-native-roots"], default-features = false, optional = true }
 ringbuf = "0.4"
